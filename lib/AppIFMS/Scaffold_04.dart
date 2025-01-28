@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'Enroliment.dart';
 import 'Login.dart';
 import 'DiariosENotas.dart';
+import 'Cracha.dart';
 
 void main() {
   runApp(const MyApp());
@@ -157,6 +158,11 @@ class MainTasksScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => DiariosENotas(username: username)),
+                      );
+                    }else if(task['title'] == 'Crachá de estudante') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => CrachaScreen(username: username)),
                       );
                     }else{
                       Navigator.push(
